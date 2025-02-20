@@ -1,0 +1,12 @@
+version: '1.0'
+
+services:
+  news:
+    image: news
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
