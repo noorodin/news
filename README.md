@@ -34,11 +34,11 @@ To install and run the application locally, follow these steps:
 
 ## Building the Application
 
-**Run the application:**
+1. **Run the application:**
 
-```bash
-npm run build
-```
+   ```bash
+   npm run build
+   ```
 
 ## Running Dockerized Version
 
