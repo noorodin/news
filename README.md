@@ -22,15 +22,15 @@ To install and run the application locally, follow these steps:
    ```
 2. **Install dependencies:**
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. **Run the application:**
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 ## Building the Application
 
@@ -44,12 +44,12 @@ npm run build
 
 1. **Running the Application with Docker Compose:**
 
-```bash
-docker compose up
-```
+   ```bash
+   docker compose up
+   ```
 
 2. **Open Application:**
 
-```bash
-http://localhost:3000
-```
+   ```bash
+   http://localhost:3000
+   ```
