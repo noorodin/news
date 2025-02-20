@@ -32,6 +32,12 @@ To install and run the application locally, follow these steps:
    npm run dev
    ```
 
+4. **Open Application:**
+
+   ```bash
+   http://localhost:8080
+   ```
+
 ## Building the Application
 
 1. **Run the application:**
