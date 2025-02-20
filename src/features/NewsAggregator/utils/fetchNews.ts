@@ -109,17 +109,18 @@ const fetchNewsAPIArticles = async ({
   const response = await axios.get("https://newsapi.org/v2/everything", {
     params: {
       apiKey: API_KEYS.newsapi,
-      q: [
-        query ?? undefined,
-        categories.length ? categories.join(" OR ") : undefined,
-        authors.length
-          ? authors.map((a) => `author:${a}`).join(" OR ")
-          : undefined,
-      ]
-        .filter(Boolean)
-        .join(" AND "),
-      from: date,
-      to: date,
+      q:
+        [
+          query ?? undefined,
+          categories.length ? categories.join(" OR ") : undefined,
+          authors.length
+            ? authors.map((a) => `author:${a}`).join(" OR ")
+            : undefined,
+        ]
+          .filter(Boolean)
+          .join(" AND ") || null,
+      from: date || null,
+      to: date || null,
     },
   });
 
