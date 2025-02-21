@@ -153,6 +153,7 @@ export const fetchNews = async (
 ): Promise<FetchNewsResponse> => {
   const { sources } = params;
 
+  // If the sources parameter is empty, we should search in all sources.
   const currentSources = sources.length ? sources : SOURCES.map((s) => s.value);
 
   const requests = currentSources.map((source) => fetchers[source]?.(params));
