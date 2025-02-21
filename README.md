@@ -60,6 +60,12 @@ To install and run the application locally, follow these steps:
    npm run preview
    ```
 
+3. **Open Application:**
+
+   ```bash
+   http://localhost:8080
+   ```
+
 ## Running Dockerized Version
 
 1. **Running the Application with Docker Compose:**
@@ -73,3 +79,7 @@ To install and run the application locally, follow these steps:
    ```bash
    http://localhost:3000
    ```
+
+## Author
+
+[Noorodin Kiani](https://www.linkedin.com/in/noorodin-kiani-25373487/)
