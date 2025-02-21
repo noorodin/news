@@ -1,7 +1,7 @@
 import { Alert, List, Spin } from "antd";
-import { Article, ArticlesStatus } from "../types";
+import { Article, ArticlesStatus } from "../../types";
 import dayjs from "dayjs";
-import { ListEmptyText } from "../constants";
+import { ListEmptyText } from "../../constants";
 
 const NewsList = ({ articles, isLoading, isError }: ArticlesStatus) => (
   <div className="overflow-auto md:h-screen p-4 flex w-full flex-col items-start">

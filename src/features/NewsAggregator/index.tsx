@@ -1,7 +1,6 @@
 import useFetchNews from "./hooks/useFetchNews";
-import NewsList from "./components/NewsList";
-import FilterPanel from "./components/FilterPanel";
 import useNewsFilters from "./hooks/useNewsFilters";
+import { FilterPanel, NewsList } from "./components";
 
 const NewsAggregator: React.FC = () => {
   const { filters, updateFilter, savePreferences } = useNewsFilters();

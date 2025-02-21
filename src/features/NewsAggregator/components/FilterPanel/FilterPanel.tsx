@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Button, DatePicker, Input, Select } from "antd";
-import { AUTHORS, CATEGORIES, SOURCES } from "../constants";
+import { AUTHORS, CATEGORIES, SOURCES } from "../../constants";
 import dayjs from "dayjs";
-import { UpdateFilter, FetchNewsParams } from "../types";
+import { UpdateFilter, FetchNewsParams } from "../../types";
 
 const { Option } = Select;
 
@@ -25,7 +25,7 @@ const FilterPanel = ({
 
     setTimeout(() => {
       setSaveText("Save Preferences");
-    }, 2000);
+    }, 1000);
   };
 
   return (

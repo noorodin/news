@@ -9,7 +9,7 @@ import {
 } from "../types";
 import { API_KEYS, SOURCES } from "../constants";
 
-const fetchNYTimesArticles = async ({
+export const fetchNYTimesArticles = async ({
   query,
   date,
   categories,
@@ -48,7 +48,7 @@ const fetchNYTimesArticles = async ({
   }));
 };
 
-const fetchGuardianArticles = async ({
+export const fetchGuardianArticles = async ({
   query,
   date,
   categories,
@@ -100,7 +100,7 @@ const fetchGuardianArticles = async ({
   );
 };
 
-const fetchNewsAPIArticles = async ({
+export const fetchNewsAPIArticles = async ({
   query,
   date,
   categories,

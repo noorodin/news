@@ -5,5 +5,5 @@ import App from "./App";
 
 test("renders App component", () => {
   render(<App />);
-  expect(screen.getByText("News Aggregator")).toBeInTheDocument();
+  expect(screen.getByText("News Aggregator!")).toBeInTheDocument();
 });
