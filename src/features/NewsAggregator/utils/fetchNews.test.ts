@@ -77,6 +77,19 @@ describe("fetchNews functions", () => {
     expect(mockedAxios.get).toHaveBeenCalledTimes(1);
   });
 
+  it("fetchNewsAPIArticles -should return an empty array if parameters are empty", async () => {
+    const result = await fetchNewsAPIArticles({
+      query: "",
+      date: "",
+      categories: [],
+      sources: [],
+      authors: [],
+    });
+
+    expect(result).toEqual([]);
+    expect(axios.get).not.toHaveBeenCalled();
+  });
+
   test("fetchNewsAPIArticles - returns formatted articles", async () => {
     mockedAxios.get.mockResolvedValueOnce({
       data: {

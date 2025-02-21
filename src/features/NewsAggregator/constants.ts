@@ -5,8 +5,8 @@ export const SOURCES = [
 ];
 
 export const AUTHORS = [
-  { label: "Jonathan Swan - The New York Times", value: "Jonathan Swan" },
   { label: "Kelsey Baker - The New York Times", value: "Kelsey Baker" },
+  { label: "Seth Godin - News API", value: "Seth Godin" },
 ];
 
 export const CATEGORIES = [

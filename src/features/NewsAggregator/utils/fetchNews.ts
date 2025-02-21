@@ -106,21 +106,28 @@ export const fetchNewsAPIArticles = async ({
   categories,
   authors,
 }: FetchNewsParams): Promise<Article[]> => {
+  const params = {
+    q:
+      [
+        query ?? undefined,
+        categories.length ? categories.join(" OR ") : undefined,
+        authors.length
+          ? authors.map((a) => `author:${a}`).join(" OR ")
+          : undefined,
+      ]
+        .filter(Boolean)
+        .join(" AND ") || null,
+    from: date || null,
+    to: date || null,
+  };
+
+  // Prevent calling fetchNewsAPIArticles with empty params due to the limitations of NEWSAPI api call.
+  if (!Object.values(params).filter(Boolean)?.length) return [];
+
   const response = await axios.get("https://newsapi.org/v2/everything", {
     params: {
       apiKey: API_KEYS.newsapi,
-      q:
-        [
-          query ?? undefined,
-          categories.length ? categories.join(" OR ") : undefined,
-          authors.length
-            ? authors.map((a) => `author:${a}`).join(" OR ")
-            : undefined,
-        ]
-          .filter(Boolean)
-          .join(" AND ") || null,
-      from: date || null,
-      to: date || null,
+      ...params,
     },
   });
 
