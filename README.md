@@ -38,12 +38,26 @@ To install and run the application locally, follow these steps:
    http://localhost:8080
    ```
 
+## Unit Testing the Application
+
+1. **Test the application:**
+
+   ```bash
+   npm run test
+   ```
+
 ## Building the Application
 
 1. **Run the application:**
 
    ```bash
    npm run build
+   ```
+
+2. **Preview the application:**
+
+   ```bash
+   npm run preview
    ```
 
 ## Running Dockerized Version
